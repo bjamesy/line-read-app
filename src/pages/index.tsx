@@ -1,7 +1,7 @@
 export default function HomePage() {
     return (
         <div>
-            this is the home page
+            check session , redirect login or /me 
         </div>
     )
 }
