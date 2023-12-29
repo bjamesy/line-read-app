@@ -1,7 +1,7 @@
-export default function HomePage() {
+export default function LandingPage() {
     return (
         <div>
-            check session , redirect login or /me 
+            check session -- redirect /login or /me 
         </div>
     )
 }
