@@ -1,13 +1,8 @@
-export default function Login() {
-    return (
-        <div>
-            this is the LOGIN page
+import '../app/globals.css'
+import Login from '../components/app/LoginForm'
 
-            <p>- Header nav</p> 
-            <p>- Login form</p> 
-            or 
-            <p>- Signup form</p> 
-            <p>- footer</p> 
-        </div>
+export default function LoginForm() {
+    return (
+        <Login/>
     )
 }
