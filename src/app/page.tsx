@@ -3,17 +3,22 @@ import { redirect } from 'next/navigation'
 import { createClient } from "@/utils/supabase/server";
 
 export default async function Home() {
-  const supabase = createClient();
+  const data = await fetch("http://localhost:3000/api")
+  const json = await data.json()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  return <>{JSON.stringify(json)}</>
+  
+  // const supabase = createClient();
 
-  if (!user) {
-    return redirect("/login");
-  }
+  // const {
+  //   data: { user },
+  // } = await supabase.auth.getUser();
 
-  return (
-    <Login/>
-  )
+  // if (!user) {
+  //   return redirect("/login");
+  // }
+
+  // return (
+  //   <Login/>
+  // )
 }
