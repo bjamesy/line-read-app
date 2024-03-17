@@ -1,12 +1,14 @@
 "use client"
 import { useForm } from 'react-hook-form'
+import postLogin from '@/src/app/actions'
 
 export default function Login() {
-    const { register, reset, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
+    
     return (
         <div className=" h-screen flex items-center justify-center">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(postLogin)}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                         Email
